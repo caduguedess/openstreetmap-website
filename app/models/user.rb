@@ -81,6 +81,7 @@ class User < ActiveRecord::Base
 
   has_many :reports
 
+  scope :ordered_by_ranking, -> { order(changesets_count: :DESC) }
   scope :visible, -> { where(:status => %w[pending active confirmed]) }
   scope :active, -> { where(:status => %w[active confirmed]) }
   scope :identifiable, -> { where(:data_public => true) }
@@ -118,6 +119,7 @@ class User < ActiveRecord::Base
   before_save :update_tile
   after_save :spam_check
   after_save :reset_preferred_languages
+  before_create :set_ranked
 
   def to_param
     display_name
@@ -325,5 +327,9 @@ class User < ActiveRecord::Base
 
   def update_tile
     self.home_tile = QuadTile.tile_for_point(home_lat, home_lon) if home_lat && home_lon
+  end
+
+  def set_ranked
+    self.ranked = %w(ranked not_ranked).sample
   end
 end

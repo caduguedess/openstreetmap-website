@@ -1,9 +1,11 @@
 # Configure ActionMailer SMTP settings
 ActionMailer::Base.smtp_settings = {
-  :address => "localhost",
-  :port => 25,
-  :domain => "localhost",
-  :enable_starttls_auto => false
+  address: 'smtp.gmail.com',
+  port: 587,
+  user_name: 'sigcolaborativo2019@gmail.com',
+  password: 'password19!',
+  authentication: 'plain',
+  enable_starttls_auto: true
 }
 
 # Set the host and protocol for all ActionMailer URLs
