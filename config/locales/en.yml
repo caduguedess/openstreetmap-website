@@ -1640,7 +1640,7 @@ en:
       get_directions_title: "Find directions between two points"
       from: "From"
       to: "To"
-      where_am_i: "Onde fica isso?"
+      where_am_i: "Onde fica?"
       where_am_i_title: Describe the current location using the search engine
       submit_text: "Go"
       reverse_directions_text: "Reverse Directions"
