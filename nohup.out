@@ -7,3 +7,225 @@ jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable
 jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
 gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
 svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [a3f1583d-48fd-4ff4-90b8-d10b3e9e7369] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/4"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/31"}] (id=16) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [a3f1583d-48fd-4ff4-90b8-d10b3e9e7369] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/4"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/31"}] (id=16) (queue=mailers) COMPLETED after 1.2797
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] 1 jobs processed at 0.7670 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [8120ec0f-245f-42c1-9bd0-05a90e24f924] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/6"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/33"}] (id=17) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [8120ec0f-245f-42c1-9bd0-05a90e24f924] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/6"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/33"}] (id=17) (queue=mailers) COMPLETED after 1.0544
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] 1 jobs processed at 0.9430 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [578a3cca-a33d-4d21-8704-6054856f1c23] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/7"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/35"}] (id=18) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [578a3cca-a33d-4d21-8704-6054856f1c23] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/7"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/35"}] (id=18) (queue=mailers) COMPLETED after 0.9022
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] 1 jobs processed at 1.0980 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [b7cd1bb3-f2e9-49a8-bf8b-76354194f560] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/8"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/37"}] (id=19) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [b7cd1bb3-f2e9-49a8-bf8b-76354194f560] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/8"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/37"}] (id=19) (queue=mailers) COMPLETED after 1.5311
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] 1 jobs processed at 0.6506 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [76d85321-9a88-4fe8-9012-7e0a9855f49e] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/9"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/39"}] (id=20) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [76d85321-9a88-4fe8-9012-7e0a9855f49e] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/9"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/39"}] (id=20) (queue=mailers) COMPLETED after 2.1741
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] 1 jobs processed at 0.4408 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [1e8c68bf-735d-4092-be2f-11aceaa8d661] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/10"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/41"}] (id=21) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Job ActionMailer::DeliveryJob [1e8c68bf-735d-4092-be2f-11aceaa8d661] from DelayedJob(mailers) with arguments: ["Notifier", "signup_confirm", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/10"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/41"}] (id=21) (queue=mailers) COMPLETED after 0.8926
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] 1 jobs processed at 1.1113 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:26.906732', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:26.906005' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:26.906055') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:31.975166', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:31.974322' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:31.974385') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:36.977624', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:36.976571' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:36.976613') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:41.986194', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:41.985430' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:41.985479') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:46.988818', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:46.988038' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:46.988098') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:51.995953', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:51.995125' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:51.995174') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = $1
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `ensure in block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: no connection to the server
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `ensure in block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+Delayed::FatalBackendError: Delayed::FatalBackendError
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:323:in `rescue in reserve_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:315:in `reserve_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:311:in `reserve_and_run_one_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:213:in `block in work_off'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:212:in `times'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:212:in `work_off'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:175:in `block (4 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:174:in `block (3 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:173:in `block (2 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:172:in `loop'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:172:in `block in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:7:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+ActiveRecord::StatementInvalid: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:35:12.009169', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:35:12.008391' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:35:12.008512') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:596:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:81:in `exec_query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:478:in `select'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:70:in `select_all'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:106:in `select_all'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:41:in `find_by_sql'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:129:in `reserve_with_scope_using_optimized_postgres'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:100:in `reserve_with_scope_using_optimized_sql'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:89:in `reserve_with_scope'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:82:in `reserve'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:316:in `reserve_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:311:in `reserve_and_run_one_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:213:in `block in work_off'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:212:in `times'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:212:in `work_off'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:175:in `block (4 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:174:in `block (3 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:173:in `block (2 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:172:in `loop'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:172:in `block in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:7:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: no connection to the server
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:596:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:81:in `exec_query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:478:in `select'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:70:in `select_all'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:106:in `select_all'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:41:in `find_by_sql'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:129:in `reserve_with_scope_using_optimized_postgres'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:100:in `reserve_with_scope_using_optimized_sql'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:89:in `reserve_with_scope'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:82:in `reserve'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:316:in `reserve_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:311:in `reserve_and_run_one_job'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:213:in `block in work_off'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:212:in `times'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:212:in `work_off'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:175:in `block (4 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:174:in `block (3 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:173:in `block (2 levels) in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:172:in `loop'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:172:in `block in start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:7:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:34:56.999982', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:34:56.999172' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:34:56.999228') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:35:02.003147', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:35:02.002407' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:35:02.002465') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:35:07.006145', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:35:07.005147' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:35:07.005217') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222)] Error while reserving job: PG::UnableToSend: no connection to the server
+: UPDATE "delayed_jobs" SET locked_at = '2019-08-10 06:35:12.009169', locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222' WHERE id IN (SELECT  "delayed_jobs"."id" FROM "delayed_jobs" WHERE ((run_at <= '2019-08-10 06:35:12.008391' AND (locked_at IS NULL OR locked_at < '2019-08-10 02:35:12.008512') OR locked_by = 'host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:17222') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
