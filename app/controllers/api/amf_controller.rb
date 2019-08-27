@@ -226,7 +226,7 @@ module Api
       loaded_lang = "en"
 
       # Load English defaults
-      en = YAML.safe_load(File.open(Rails.root.join("config", "potlatch", "locales", "en.yml")))["en"]
+      en = YAML.safe_load(File.open(Rails.root.join("config", "potlatch", "locales", "pt-BR.yml")))["en"]
 
       if lang == "en"
         return [loaded_lang, en]
