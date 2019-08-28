@@ -1119,9 +1119,9 @@ en:
   layouts:
     project_name:
       # in <title>
-      title: EBTopoMaps
+      title: EBTopoMap
       # in <h1>
-      h1: EBTopoMaps
+      h1: EBTopoMap
     logo:
       alt_text: OpenStreetMap logo
     home: Go to Home Location
