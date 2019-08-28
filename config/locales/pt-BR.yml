@@ -1174,8 +1174,8 @@ pt-BR:
       provide_details: Por favor, forneça os detalhes necessários
   layouts:
     project_name:
-      title: OpenStreetMap
-      h1: OpenStreetMap
+      title: EBTopoMap
+      h1: EBTopoMap
     logo:
       alt_text: Logotipo do OpenStreetMap
     home: Ir para o seu local principal
