@@ -310,3 +310,526 @@ Tasks: TOP => jobs:work
 [Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:28863)] Job ActionMailer::DeliveryJob [c0773a63-8a0d-4fa7-a21a-bb7b68f8c236] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/43"}] (id=23) (queue=mailers) COMPLETED after 0.8741
 [Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:28863)] 1 jobs processed at 1.1314 j/s, 0 failed
 [Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:28863)] Exiting...
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = $1
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:20217)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:20217)] Job ActionMailer::DeliveryJob [50604c8e-3b59-403a-8dbf-04b639d10182] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/44"}] (id=24) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:20217)] Job ActionMailer::DeliveryJob [50604c8e-3b59-403a-8dbf-04b639d10182] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/44"}] (id=24) (queue=mailers) COMPLETED after 2.0354
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:20217)] 1 jobs processed at 0.4766 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:20217)] Exiting...
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: SELECT c.relname FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE n.nspname = ANY (current_schemas(false)) AND c.relkind IN ('r','v','m','p','f')
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:22635)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:22635)] Exiting...
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = $1
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [21bcb8d7-693a-4d4f-b601-ad7a39c248d4] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/45"}] (id=25) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [21bcb8d7-693a-4d4f-b601-ad7a39c248d4] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/45"}] (id=25) (queue=mailers) COMPLETED after 1.5339
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 0.6304 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [f50ee97d-2a4a-49a1-a2e4-cdaff2c6656c] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/46"}] (id=26) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [f50ee97d-2a4a-49a1-a2e4-cdaff2c6656c] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/46"}] (id=26) (queue=mailers) COMPLETED after 0.7909
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 1.2543 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [189274e4-47b7-4a1a-a9ed-9d8609038163] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/47"}] (id=27) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [189274e4-47b7-4a1a-a9ed-9d8609038163] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/47"}] (id=27) (queue=mailers) COMPLETED after 0.8936
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 1.1112 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [438474ba-5771-416e-a05f-f9e477c89258] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/48"}] (id=28) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [438474ba-5771-416e-a05f-f9e477c89258] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/48"}] (id=28) (queue=mailers) COMPLETED after 0.8853
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 1.1214 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [4c72f7fb-192a-447c-a617-5372010a6bd7] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/49"}] (id=29) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [4c72f7fb-192a-447c-a617-5372010a6bd7] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/49"}] (id=29) (queue=mailers) COMPLETED after 1.3635
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 0.7291 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [d57dbde1-39e5-4727-a2bd-2c35f2ca1959] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/50"}] (id=30) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [d57dbde1-39e5-4727-a2bd-2c35f2ca1959] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/50"}] (id=30) (queue=mailers) COMPLETED after 1.3304
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 0.7479 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [84dc2096-26da-45ca-b24a-c59935eb856f] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/51"}] (id=31) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Job ActionMailer::DeliveryJob [84dc2096-26da-45ca-b24a-c59935eb856f] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/51"}] (id=31) (queue=mailers) COMPLETED after 1.2308
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] 1 jobs processed at 0.8076 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1896)] Exiting...
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: SELECT c.relname FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE n.nspname = ANY (current_schemas(false)) AND c.relkind IN ('r','v','m','p','f')
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:22849)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:22849)] Exiting...
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: SELECT c.relname FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE n.nspname = ANY (current_schemas(false)) AND c.relkind IN ('r','v','m','p','f')
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1710)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1710)] Exiting...
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: SELECT c.relname FROM pg_class c LEFT JOIN pg_namespace n ON n.oid = c.relnamespace WHERE n.nspname = ANY (current_schemas(false)) AND c.relkind IN ('r','v','m','p','f')
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `async_exec'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:63:in `block (2 levels) in query'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:62:in `block in query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:61:in `query'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `query_values'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/schema_statements.rb:36:in `data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:114:in `prepare_data_sources'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/schema_cache.rb:48:in `data_source_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/model_schema.rb:324:in `table_exists?'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:99:in `get_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:87:in `reset_primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/attribute_methods/primary_key.rb:75:in `primary_key'
+/var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:76:in `primary_key'
+/var/lib/gems/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:44:in `update_all'
+/var/lib/gems/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/var/lib/gems/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1772)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:1772)] Exiting...
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
