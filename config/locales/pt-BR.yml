@@ -1618,7 +1618,7 @@ pt-BR:
       no_iframe_support: Seu navegador não suporta iframes HTML, que são necessários
         para esse recurso.
     export:
-      title: Exportar
+      title: Ranking
       area_to_export: Área a Exportar
       manually_select: Selecionar outra área manualmente
       format_to_export: Formato a Exportar
