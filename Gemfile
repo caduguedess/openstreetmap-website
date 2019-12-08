@@ -126,8 +126,8 @@ gem "mimemagic"
 # Used for browser detection
 gem "browser"
 
-gem 'execjs' 
-gem 'therubyracer'
+gem "execjs" 
+gem "therubyracer"
 
 # Gems useful for development
 group :development do
