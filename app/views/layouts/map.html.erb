@@ -40,7 +40,7 @@
 	  <h2>Ranking</h2>
           <ol type="1">
             <% User.visible.ordered_by_ranking.each do |user| %>
-              <li><b><%= user.display_name %></b> - <%= user.changesets.size %></li>
+              <li><b><%= user.display_name %></b> - <%= user.changesets_count %></li>
             <% end %>
           </ol>
         <% end %>
