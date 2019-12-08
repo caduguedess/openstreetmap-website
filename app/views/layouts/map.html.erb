@@ -40,7 +40,7 @@
 	  <h2>Tabela1</h2>
           <ol type="1">
             <% User.visible.ordered_by_ranking.each do |user| %>
-              <li><b><%= user.display_name %></b> - <%= user.changeset.sum(:num_changes) %></li>
+              <li><b><%= user.display_name %></b> - <%= user.changesets_count %></li>
             <% end %>
           </ol>
         <% end %>
