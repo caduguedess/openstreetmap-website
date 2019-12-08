@@ -37,10 +37,10 @@
     <div id="sidebar_content">
       <div class="inner22">
         <% if current_user && current_user.ranked == 'ranked' %>
-	  <h2>Tabela</h2>
+	  <h2>Tabela1</h2>
           <ol type="1">
             <% User.visible.ordered_by_ranking.each do |user| %>
-              <li><b><%= user.display_name %></b> - <%= user.changesets.size %></li>
+              <li><b><%= user.display_name %></b> - <%= user.changeset.sum(:num_changes) %></li>
             <% end %>
           </ol>
         <% end %>
