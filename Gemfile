@@ -129,6 +129,8 @@ gem "browser"
 gem "execjs" 
 gem "therubyracer"
 
+gem 'merit'
+
 # Gems useful for development
 group :development do
   gem "annotate"

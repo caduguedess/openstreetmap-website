@@ -1,4 +1,5 @@
 OpenStreetMap::Application.routes.draw do
+  get 'ranking/index'
   # API
   namespace :api do
     get "capabilities" => "capabilities#show" # Deprecated, remove when 0.6 support is removed

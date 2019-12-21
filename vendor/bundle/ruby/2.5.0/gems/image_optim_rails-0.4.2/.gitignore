@@ -1,0 +1,15 @@
+/pkg/
+/*.gem
+
+/doc/
+/rdoc/
+/.yardoc/
+/coverage/
+
+Makefile
+*.o
+*.bundle
+/tmp/
+
+/Gemfile.lock
+/gemfiles/

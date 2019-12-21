@@ -1,0 +1,13 @@
+<div class="inner22">
+  <h2>Tabela1</h2>
+  <ol type="1">
+    <% User.visible.ordered_by_ranking.each do |user| %>
+      <li><b><%= user.display_name %></b> - <%= user.changesets_count %></li>
+      <ul>
+        <% user.badges.each do |badge| %>
+          <li><%= badge.name %></li>
+          <% end %>
+      </ul>
+    <% end %>
+  </ol>
+</div>

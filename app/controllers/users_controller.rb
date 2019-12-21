@@ -396,6 +396,7 @@ class UsersController < ApplicationController
         elsif friendship.save
           flash[:notice] = t "users.make_friend.success", :name => @new_friend.display_name
           Notifier.friend_notification(friendship).deliver_later
+          current_user.touch
         else
           friendship.add_error(t("users.make_friend.failed", :name => @new_friend.display_name))
         end
@@ -549,6 +550,7 @@ class UsersController < ApplicationController
   # handle password authentication
   def password_authentication(username, password)
     if user = User.authenticate(:username => username, :password => password)
+      user.touch
       successful_login(user)
     elsif user = User.authenticate(:username => username, :password => password, :pending => true)
       unconfirmed_login(user)

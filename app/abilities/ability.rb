@@ -13,6 +13,8 @@ class Ability
          :search_geonames, :search_osm_nominatim_reverse, :search_geonames_reverse], :geocoder
     can [:token, :request_token, :access_token, :test_request], :oauth
 
+    can [:index], Ranking
+
     if Settings.status != "database_offline"
       can [:index, :feed], Changeset
       can :index, ChangesetComment

@@ -1,0 +1,20 @@
+dist: precise
+cache: bundler
+sudo: false
+language: ruby
+rvm:
+  - 2.5.1
+  - 2.4.2
+  - 2.3.5
+  - rbx-3
+  - jruby-head
+matrix:
+  allow_failures:
+    - rvm: rbx-3
+    - rvm: jruby-head
+addons:
+  apt:
+    packages:
+      - libgd2-noxpm
+before_install:
+  - wget -q -O - https://www.mongodb.org/static/pgp/server-3.2.pub | sudo apt-key add -

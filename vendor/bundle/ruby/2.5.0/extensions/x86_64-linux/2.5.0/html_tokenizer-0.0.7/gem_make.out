@@ -1,0 +1,17 @@
+current directory: /home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/html_tokenizer-0.0.7/ext/html_tokenizer_ext
+/usr/bin/ruby2.5 -I /usr/local/lib/site_ruby/2.5.0 -r ./siteconf20191215-2516-a80x41.rb extconf.rb
+creating Makefile
+
+current directory: /home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/html_tokenizer-0.0.7/ext/html_tokenizer_ext
+make "DESTDIR=" clean
+
+current directory: /home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/html_tokenizer-0.0.7/ext/html_tokenizer_ext
+make "DESTDIR="
+compiling html_tokenizer.c
+compiling parser.c
+compiling tokenizer.c
+linking shared-object html_tokenizer_ext.so
+
+current directory: /home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/html_tokenizer-0.0.7/ext/html_tokenizer_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 html_tokenizer_ext.so ./.gem.20191215-2516-vdp3fx

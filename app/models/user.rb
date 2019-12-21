@@ -47,6 +47,8 @@
 #
 
 class User < ActiveRecord::Base
+  has_merit
+
   require "xml/libxml"
 
   has_many :traces, -> { where(:visible => true) }
@@ -120,6 +122,7 @@ class User < ActiveRecord::Base
   after_save :spam_check
   after_save :reset_preferred_languages
   before_create :set_ranked
+  after_touch :set_badge
 
   def to_param
     display_name
@@ -331,5 +334,10 @@ class User < ActiveRecord::Base
 
   def set_ranked
     self.ranked = %w(ranked not_ranked).sample
+  end
+
+  def set_badge
+    add_badge(1) if changesets_count >= 10
+    add_badge(2) if friends.count >= 3
   end
 end
