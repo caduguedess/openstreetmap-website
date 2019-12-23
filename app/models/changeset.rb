@@ -54,6 +54,7 @@ class Changeset < ActiveRecord::Base
                                                     :numericality => { :integer_only => true }
 
   before_save :update_closed_at
+  after_create :set_score
 
   # maximum number of elements allowed in a changeset
   MAX_ELEMENTS = 10000
@@ -211,5 +212,9 @@ class Changeset < ActiveRecord::Base
     self.tags = other.tags
 
     save_with_tags!
+  end
+
+  def set_score
+    user.add_points(1, category: 'changeset')
   end
 end

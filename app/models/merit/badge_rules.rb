@@ -30,16 +30,15 @@ module Merit
       # grant_on 'comments#create', badge: 'commenter', level: 10 do |comment|
       #   comment.user.comments.count == 10
       # end
-      grant_on ['api/changesets#create', 'api/changesets#update'], badge: 'changesets', to: :user, model_name: '::User' do |user, current_user|
+      grant_on ['api/changesets#create', 'api/changesets#update'], badge: 'changesets', model_name: 'User' do |user|
         user.changesets_count >= 1
-        # true == true
       end
 
-      grant_on 'users#login', badge: 'login', to: :user do |user|
-        user.login.count == 10
-      end
+      # grant_on 'users#login', badge: 'login', model_name: 'User' do |user|
+        # user.login.count == 10
+      # end
 
-      grant_on 'users#make_friend', badge: 'friendships', to: :user do |user|
+      grant_on 'users#make_friend', badge: 'friendships', model_name: 'User' do |user|
         user.friends.count == 3
       end
 

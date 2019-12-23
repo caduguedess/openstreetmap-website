@@ -2,12 +2,33 @@
   <h2>Tabela1</h2>
   <ol type="1">
     <% User.visible.ordered_by_ranking.each do |user| %>
-      <li><b><%= user.display_name %></b> - <%= user.changesets_count %></li>
+      <li>
+          <%= user_thumbnail_tiny(user, :width => 25, :height => 25) %>
+    <b><%= user.display_name %></b> - <%= user.points %></li>
+
       <ul>
         <% user.badges.each do |badge| %>
-          <li><%= badge.name %></li>
+          <li style="display: inline">
+          <% if badge.name == 'changesets' %>
+            <img src="https://img.icons8.com/color/25/000000/gold-medal--v1.png">
           <% end %>
+          <% if badge.name == 'friends' %>
+            <img src="https://img.icons8.com/cotton/25/000000/olympic-medal-silver.png">
+          <% end %>
+          </li>
+        <% end %>
       </ul>
     <% end %>
   </ol>
+  <ul>
+    <li>Legenda:</li>
+    <li>
+      <img src="https://img.icons8.com/color/48/000000/gold-medal--v1.png">
+      <span>Mais de 10 contribuições</span>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/cotton/48/000000/olympic-medal-silver.png">
+      <span>Mais de 3 amigos</span>
+    </li>
+  </ul>
 </div>

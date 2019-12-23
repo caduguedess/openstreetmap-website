@@ -5,7 +5,7 @@ module Api
     layout "site"
     require "xml/libxml"
 
-    before_action :authorize, :only => [:create, :update, :upload, :close, :subscribe, :unsubscribe]
+    before_action :authorize, :set_user, :only => [:create, :update, :upload, :close, :subscribe, :unsubscribe]
 
     authorize_resource
 
@@ -21,6 +21,7 @@ module Api
     # Create a changeset from XML.
     def create
       assert_method :put
+      @user = current_user
 
       cs = Changeset.from_xml(request.raw_post, true)
 
@@ -233,12 +234,11 @@ module Api
     def update
       # request *must* be a PUT.
       assert_method :put
-
       @changeset = Changeset.find(params[:id])
       new_changeset = Changeset.from_xml(request.raw_post)
 
-      check_changeset_consistency(@changeset, current_user)
-      @changeset.update_from(new_changeset, current_user)
+      check_changeset_consistency(@changeset, @user)
+      @changeset.update_from(new_changeset, @user)
       render "changeset"
     end
 
@@ -285,6 +285,10 @@ module Api
     end
 
     private
+
+    def set_user
+      @user = current_user
+    end
 
     #------------------------------------------------------------
     # utility functions below.

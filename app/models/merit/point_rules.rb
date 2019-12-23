@@ -13,9 +13,9 @@ module Merit
     include Merit::PointRulesMethods
 
     def initialize
-      # score 10, :on => 'users#create' do |user|
-      #   user.bio.present?
-      # end
+      score 10, :on => 'api/changesets#update', model_name: 'User' do |_user, current_user:|
+        current_user.changesets_count.present?
+      end
       #
       # score 15, :on => 'reviews#create', :to => [:reviewer, :reviewed]
       #

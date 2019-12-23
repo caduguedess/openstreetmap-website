@@ -385,6 +385,7 @@ class UsersController < ApplicationController
 
   def make_friend
     @new_friend = User.find_by(:display_name => params[:display_name])
+    @user = current_user
 
     if @new_friend
       if request.post?
@@ -551,8 +552,10 @@ class UsersController < ApplicationController
   def password_authentication(username, password)
     if user = User.authenticate(:username => username, :password => password)
       user.touch
+      @user = user
       successful_login(user)
     elsif user = User.authenticate(:username => username, :password => password, :pending => true)
+      @user = user
       unconfirmed_login(user)
     elsif User.authenticate(:username => username, :password => password, :suspended => true)
       failed_login t("users.login.account is suspended", :webmaster => "mailto:#{Settings.support_email}").html_safe, username
