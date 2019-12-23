@@ -83,7 +83,7 @@ class User < ActiveRecord::Base
 
   has_many :reports
 
-  scope :ordered_by_ranking, -> { order(changesets_count: :DESC) }
+  scope :ordered_by_ranking, -> { sort(&:points).reverse }
   scope :visible, -> { where(:status => %w[pending active confirmed]) }
   scope :active, -> { where(:status => %w[active confirmed]) }
   scope :identifiable, -> { where(:data_public => true) }
@@ -337,7 +337,7 @@ class User < ActiveRecord::Base
   end
 
   def set_badge
-    add_badge(1) if changesets_count >= 10
-    add_badge(2) if friends.count >= 3
+    add_badge(1) if changesets_count >= 10 && !badges.include?(Merit::Badge.find(1))
+    add_badge(2) if friends.count >= 3 && !badges.include?(Merit::Badge.find(2))
   end
 end

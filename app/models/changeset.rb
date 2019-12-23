@@ -54,7 +54,7 @@ class Changeset < ActiveRecord::Base
                                                     :numericality => { :integer_only => true }
 
   before_save :update_closed_at
-  after_create :set_score
+  # after_update :set_score
 
   # maximum number of elements allowed in a changeset
   MAX_ELEMENTS = 10000
@@ -215,6 +215,7 @@ class Changeset < ActiveRecord::Base
   end
 
   def set_score
-    user.add_points(1, category: 'changeset')
+    nodes_count = self.nodes.count
+    user.add_points(nodes_count, category: 'changeset')
   end
 end

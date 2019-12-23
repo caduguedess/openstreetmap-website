@@ -131,6 +131,7 @@ module Api
       diff_reader = DiffReader.new(request.raw_post, changeset)
       Changeset.transaction do
         result = diff_reader.commit
+        changeset.set_score
         render :xml => result.to_s
       end
     end
