@@ -35,7 +35,7 @@ module Merit
       end
 
       # grant_on 'users#login', badge: 'login', model_name: 'User' do |user|
-        # user.login.count == 10
+      # user.login.count == 10
       # end
 
       grant_on 'users#make_friend', badge: 'friendships', model_name: 'User' do |user|
