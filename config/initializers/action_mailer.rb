@@ -1,10 +1,10 @@
 # Configure ActionMailer SMTP settings
 ActionMailer::Base.smtp_settings = {
-  address: 'smtp.gmail.com',
+  address: 'in-v3.mailjet.com',
   port: 587,
-  user_name: 'sigcolaborativo2019@gmail.com',
-  password: 'password19!',
-  authentication: 'plain',
+  user_name: '6e0a6b882174536e571d89f526fe17e6',
+  password: '5d7b4aa67dc94e0c224db12f919ed1f3',
+  authentication: :plain,
   enable_starttls_auto: true
 }
 
