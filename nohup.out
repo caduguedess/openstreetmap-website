@@ -3632,3 +3632,87 @@ jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable
 jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
 gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
 svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = $1
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `async_exec_params'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:611:in `block (2 levels) in exec_no_cache'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:610:in `block in exec_no_cache'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:609:in `exec_no_cache'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `execute_and_clear'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/postgresql/database_statements.rb:94:in `exec_delete'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/database_statements.rb:170:in `update'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/composite_primary_keys-11.1.0/lib/composite_primary_keys/relation.rb:50:in `update_all'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job_active_record-4.1.3/lib/delayed/backend/active_record.rb:71:in `clear_locks!'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/plugins/clear_locks.rb:9:in `block (2 levels) in <class:ClearLocks>'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block (2 levels) in add'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:61:in `block in initialize'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:79:in `block in add'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:66:in `execute'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/lifecycle.rb:40:in `run_callbacks'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/worker.rb:171:in `start'
+/home/openstreetmap/openstreetmap-website/vendor/bundle/ruby/2.5.0/gems/delayed_job-4.1.7/lib/delayed/tasks.rb:9:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+Tasks: TOP => jobs:work
+(See full trace by running task with --trace)
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Starting job worker
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Job ActionMailer::DeliveryJob [d4566d1e-bac5-4375-9edb-8b59c604ccc9] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/121"}] (id=106) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Job ActionMailer::DeliveryJob [d4566d1e-bac5-4375-9edb-8b59c604ccc9] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/121"}] (id=106) (queue=mailers) COMPLETED after 1.9047
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] 1 jobs processed at 0.5160 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Job ActionMailer::DeliveryJob [69e66712-0da1-4718-aa13-78d447c7c14b] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/122"}] (id=107) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Job ActionMailer::DeliveryJob [69e66712-0da1-4718-aa13-78d447c7c14b] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/122"}] (id=107) (queue=mailers) COMPLETED after 1.5892
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] 1 jobs processed at 0.6251 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Job ActionMailer::DeliveryJob [2aef5240-130f-4734-9ddd-2c27e51ab333] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/123"}] (id=108) (queue=mailers) RUNNING
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Job ActionMailer::DeliveryJob [2aef5240-130f-4734-9ddd-2c27e51ab333] from DelayedJob(mailers) with arguments: ["Notifier", "lost_password", "deliver_now", {"_aj_globalid"=>"gid://open-street-map/User/2"}, {"_aj_globalid"=>"gid://open-street-map/UserToken/123"}] (id=108) (queue=mailers) COMPLETED after 1.2215
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] 1 jobs processed at 0.8115 j/s, 0 failed
+[Worker(host:ubuntu-s-1vcpu-1gb-nyc1-01 pid:19244)] Exiting...
+pngcrush worker: `pngcrush` not found; please provide proper binary or disable this worker (--no-pngcrush argument or `:pngcrush => false` through options)
+advpng worker: `advpng` not found; please provide proper binary or disable this worker (--no-advpng argument or `:advpng => false` through options)
+optipng worker: `optipng` not found; please provide proper binary or disable this worker (--no-optipng argument or `:optipng => false` through options)
+pngquant worker: `pngquant` not found; please provide proper binary or disable this worker (--no-pngquant argument or `:pngquant => false` through options)
+jhead worker: `jhead` not found, `jpegtran` not found; please provide proper binary or disable this worker (--no-jhead argument or `:jhead => false` through options)
+jpegoptim worker: `jpegoptim` not found; please provide proper binary or disable this worker (--no-jpegoptim argument or `:jpegoptim => false` through options)
+jpegtran worker: `jpegtran` not found; please provide proper binary or disable this worker (--no-jpegtran argument or `:jpegtran => false` through options)
+gifsicle worker: `gifsicle` not found; please provide proper binary or disable this worker (--no-gifsicle argument or `:gifsicle => false` through options)
+svgo worker: `svgo` not found; please provide proper binary or disable this worker (--no-svgo argument or `:svgo => false` through options)
