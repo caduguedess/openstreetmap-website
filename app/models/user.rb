@@ -338,6 +338,9 @@ class User < ActiveRecord::Base
 
   def set_badge
     add_badge(1) if changesets_count >= 10 && !badges.include?(Merit::Badge.find(1))
-    add_badge(2) if friends.count >= 3 && !badges.include?(Merit::Badge.find(2))
+    add_badge(2) if changesets_count >= 30 && !badges.include?(Merit::Badge.find(2))
+    add_badge(3) if changesets_count >= 80 && !badges.include?(Merit::Badge.find(3))
+    add_badge(4) if friends.count >= 3 && !badges.include?(Merit::Badge.find(4))
+    add_badge(5) if diary_entries_count >= 5 && !badges.include?(Merit::Badge.find(5))
   end
 end

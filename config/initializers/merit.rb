@@ -34,12 +34,32 @@ end
 
 Merit::Badge.create!(
   id: 1,
-  name: 'changesets',
-  description: 'A contributions medal'
+  name: 'changesets10',
+  description: 'A 10 contributions medal'
 )
+
 
 Merit::Badge.create!(
   id: 2,
+  name: 'changesets30',
+  description: 'A 30 contributions medal'
+)
+
+
+Merit::Badge.create!(
+  id: 3,
+  name: 'changesets80',
+  description: 'A 80 contributions medal'
+)
+
+Merit::Badge.create!(
+  id: 4,
   name: 'friends',
   description: 'A friends medal'
+)
+
+Merit::Badge.create!(
+  id: 5,
+  name: 'posts',
+  description: 'A posts medal'
 )
