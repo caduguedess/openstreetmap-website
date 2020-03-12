@@ -130,6 +130,7 @@ gem "execjs"
 gem "therubyracer"
 
 gem 'merit'
+gem 'whenever', require: false
 
 # Gems useful for development
 group :development do

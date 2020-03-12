@@ -83,7 +83,7 @@ class User < ActiveRecord::Base
 
   has_many :reports
 
-  scope :ordered_by_ranking, -> { sort(&:points).reverse }
+  scope :ordered_by_ranking, -> { sort_by(&:points).reverse }
   scope :visible, -> { where(:status => %w[pending active confirmed]) }
   scope :active, -> { where(:status => %w[active confirmed]) }
   scope :identifiable, -> { where(:data_public => true) }
@@ -315,6 +315,20 @@ class User < ActiveRecord::Base
     ClientApplication.find_by(:key => application_key).access_token_for_user(self)
   end
 
+  def set_changesets_badges
+    add_badge(1) if changesets_count >= 10 && !badges.include?(Merit::Badge.find(1))
+    add_badge(2) if changesets_count >= 30 && !badges.include?(Merit::Badge.find(2))
+    add_badge(3) if changesets_count >= 80 && !badges.include?(Merit::Badge.find(3))
+  end
+
+  def set_friendship_badges
+    add_badge(4) if friends.count >= 3 && !badges.include?(Merit::Badge.find(4))
+  end
+
+  def set_diary_entries_badges
+    add_badge(5) if diary_entries_count >= 5 && !badges.include?(Merit::Badge.find(5))
+  end
+
   private
 
   def set_defaults
@@ -337,10 +351,8 @@ class User < ActiveRecord::Base
   end
 
   def set_badge
-    add_badge(1) if changesets_count >= 10 && !badges.include?(Merit::Badge.find(1))
-    add_badge(2) if changesets_count >= 30 && !badges.include?(Merit::Badge.find(2))
-    add_badge(3) if changesets_count >= 80 && !badges.include?(Merit::Badge.find(3))
-    add_badge(4) if friends.count >= 3 && !badges.include?(Merit::Badge.find(4))
-    add_badge(5) if diary_entries_count >= 5 && !badges.include?(Merit::Badge.find(5))
+    set_changesets_badges
+    set_friendship_badges
+    set_diary_entries_badges
   end
 end

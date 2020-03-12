@@ -1,21 +1,14 @@
 <div class="inner22">
   <h2>Ranking</h2>
   <ol type="1">
-    <% User.visible.ordered_by_ranking.each do |user| %>
+    <% @users.each do |user| %>
       <li>
           <%= user_thumbnail_tiny(user, :width => 25, :height => 25) %>
     <b><%= user.display_name %></b> - <%= user.points %></li>
 
       <ul>
         <% user.badges.each do |badge| %>
-          <li style="display: inline">
-          <% if badge.name == 'changesets' %>
-            <img src="https://img.icons8.com/color/25/000000/gold-medal--v1.png">
-          <% end %>
-          <% if badge.name == 'friends' %>
-            <img src="https://img.icons8.com/cotton/25/000000/olympic-medal-silver.png">
-          <% end %>
-          </li>
+          <li style="display: inline"><%= badge_image badge.name %></li>
         <% end %>
       </ul>
     <% end %>

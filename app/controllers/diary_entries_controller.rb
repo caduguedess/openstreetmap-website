@@ -32,6 +32,7 @@ class DiaryEntriesController < ApplicationController
       if default_lang
         default_lang.v = @diary_entry.language_code
         default_lang.save!
+        current_user.touch
       else
         current_user.preferences.create(:k => "diary.default_language", :v => @diary_entry.language_code)
       end

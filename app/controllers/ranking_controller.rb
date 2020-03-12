@@ -6,6 +6,7 @@ class RankingController < ApplicationController
   authorize_resource
   
   def index
-      render :action => :index, :layout => map_layout
+    @users = User.visible.ordered_by_ranking
+    render action: :index, layout: map_layout
   end
 end
