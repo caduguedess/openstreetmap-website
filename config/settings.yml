@@ -24,7 +24,7 @@ api_version: "0.6"
 #   gpx_offline - gpx storage offline
 status: "online"
 # The maximum area you're allowed to request, in square degrees
-max_request_area: 0.25
+max_request_area: 1600
 # Number of GPS trace/trackpoints returned per-page
 tracepoints_per_page: 5000
 # Maximum number of nodes that will be returned by the api in a map request
